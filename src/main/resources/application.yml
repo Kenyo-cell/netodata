@@ -5,3 +5,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/neto
     username: kenyo
     driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
