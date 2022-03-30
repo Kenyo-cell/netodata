@@ -1,0 +1,81 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-jpa-1.yaml
+  - changeSet:
+      id: 1
+      author: Kenyo-cell
+      changes:
+        - createTable:
+            tableName: persons
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: "name"
+                  type: VARCHAR
+                  constraints:
+                    nullable: false
+              - column:
+                  name: surname
+                  type: VARCHAR
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: SMALLINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone_number
+                  type: CHAR(11)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: city_of_living
+                  type: VARCHAR
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: Kenyo-cell
+      changes:
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: "name"
+                  value: "alexey"
+              - column:
+                  name: surname
+                  value: "alexeev"
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: phone_number
+                  value: "81234567890"
+              - column:
+                  name: city_of_living
+                  value: "MOSCOW"
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: "name"
+                  value: "vitaliy"
+              - column:
+                  name: surname
+                  value: "Ionov"
+              - column:
+                  name: age
+                  value: 15
+              - column:
+                  name: phone_number
+                  value: "89870654321"
+              - column:
+                  name: city_of_living
+                  value: "VORONEZH"
