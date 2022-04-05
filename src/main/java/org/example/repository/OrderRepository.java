@@ -3,14 +3,12 @@ package org.example.repository;
 import org.example.entity.CustomerEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.io.*;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 @Repository
