@@ -8,7 +8,7 @@ import org.example.service.PersonService;
 
 import java.util.List;
 
-@RestController
+//@RestController
 public class PersonController {
     private final PersonService service;
 
